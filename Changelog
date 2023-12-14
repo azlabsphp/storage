@@ -1,0 +1,33 @@
+# Changelogs
+
+## [0.1.0] 2022-05-07
+
+- Replaced FileSystem::putAsFile() with FileSystem::put() method
+- Replaced FileSystem::getContent() with FileSystem::get() method
+- FileSystem put() interface accepts UploadedFile::class instead of binary string as 2nd argument
+- FileSystem get() returns UploadedFile::class as result of reading input
+- UploadedFile::toArray() now exclude the content key
+- UploadedFile::jsonSerialize() method now return the binary string
+
+## [0.1.2] 2022-05-07
+
+- Added a StorageObjectValue proxy function
+- Added PathResourceValue::create method
+
+## [0.1.3] 2022-05-16
+
+- updated PathResourceValue::createFromResource function implementation
+
+## [0.1.4] 2022-05-16
+
+- Bug fix in UploadedFile::createFromSplFileInfo implementation
+
+## [0.2.0] 2022-06-08
+
+- Replaced unnecessary PathResource::key and PathResource::relativeKey with PathResource::path
+- PathResourceCollection::toArray support FileResource and SharedResource
+- Renamed PathResource::isShared to PathResource::shared
+
+## [0.2.1] 2022-06-08
+
+- Deprecated Random and FileSystemPath classes
